@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StoryCraft – Hinge Chanakya Kumar Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="StoryCraft by Hinge Chanakya – my personal process to turn simple story ideas into powerful, emotional narratives for films, short stories, and scripts." />
+  <meta name="keywords" content="storytelling, scriptwriting, short film, story writer, Hinge Chanakya, StoryCraft, writing process, narrative design" />
+  <meta name="author" content="Hinge Chanakya Kumar" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="StoryCraft – How I Turn Simple Ideas into Powerful Stories" />
+  <meta property="og:description" content="See my storytelling process, posters, and how I turn simple ideas into cinematic stories." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.ibb.co/Vcr42cYS/Whats-App-Image-2025-11-26-at-9-39-14-PM.jpg" />
+  <meta property="og:url" content="https://your-domain.com/storycraft" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f7fb;
+      color: #1f2933;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ====== NAVBAR ====== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(245, 247, 251, 0.96);
+      border-bottom: 1px solid rgba(209, 213, 219, 0.4);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo span {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #2563eb, #ec4899);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2563eb, #ec4899);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #2563eb, #ec4899);
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(59, 130, 246, 0.5);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* ====== PAGE WRAPPER & HERO HEADER ====== */
+
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    header.page-hero {
+      text-align: center;
+      padding: 32px 12px 20px;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: #e1edff;
+      color: #294b8b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    header.page-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    header.page-hero p {
+      font-size: 1rem;
+      color: #5b6474;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .hero-cta-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #ec4899);
+      color: #ffffff;
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(59, 130, 246, 0.55);
+    }
+
+    .btn-ghost {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-ghost:hover {
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    /* ====== HERO SECTION ====== */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.7fr);
+      gap: 28px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .hero-text p {
+      font-size: 0.98rem;
+      color: #4b5563;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+      font-size: 0.78rem;
+      color: #374151;
+      font-weight: 500;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-image {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+      object-fit: cover;
+      transform: translateY(0);
+      animation: floatPoster 5s ease-in-out infinite;
+    }
+
+    @keyframes floatPoster {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .hero-caption {
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* ====== CONTENT SECTIONS ====== */
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .content-section {
+      margin-top: 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px 20px 28px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .content-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .content-section p {
+      font-size: 0.98rem;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 20px 18px 22px;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.16);
+      border-color: #bfdbfe;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #4b5563;
+    }
+
+    .steps {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    .steps li:last-child {
+      border-bottom: none;
+    }
+
+    .steps span.step-num {
+      min-width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: #294b8b;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .steps span.step-title {
+      font-weight: 600;
+      color: #111827;
+      display: block;
+    }
+
+    .steps span.step-desc {
+      display: block;
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 1px;
+    }
+
+    /* ====== STORYCRAFT SECTION ====== */
+
+    .storycraft-section {
+      margin-top: 32px;
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 22px;
+      padding: 26px 20px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .storycraft-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.35), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(244,114,182,0.35), transparent 55%);
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .storycraft-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .storycraft-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .storycraft-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .storycraft-sub {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-bottom: 6px;
+      max-width: 440px;
+    }
+
+    .storycraft-poster {
+      max-width: 210px;
+    }
+
+    .storycraft-poster img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.75);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.7);
+    }
+
+    .grid-letters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .letter-card {
+      background: rgba(15, 23, 42, 0.78);
+      border-radius: 16px;
+      padding: 14px 13px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .letter-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.9);
+      border-color: #a5b4fc;
+    }
+
+    .letter-symbol {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      color: #a5b4fc;
+    }
+
+    .letter-heading {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .letter-desc {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    /* ====== CONTACT / FOOTER ====== */
+
+    .closing {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1rem;
+      color: #111827;
+      font-weight: 500;
+    }
+
+    .closing span {
+      display: block;
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .contact-section {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .contact-card {
+      display: inline-block;
+      padding: 18px 22px;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 12px 32px rgba(15,23,42,0.12);
+      border: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .contact-card strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .contact-card a {
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .contact-tagline {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    .footer-meta {
+      margin-top: 10px;
+      text-align:center;
+      font-size:0.8rem;
+      color:#6b7280;
+    }
+
+    /* ====== ANIMATIONS: SCROLL REVEAL ====== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ====== RESPONSIVE ====== */
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      header.page-hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .storycraft-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .storycraft-poster {
+        max-width: 100%;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 56px;
+        right: 16px;
+        background: rgba(245,247,251,0.98);
+        border-radius: 14px;
+        padding: 10px 14px;
+        box-shadow: 0 14px 34px rgba(15,23,42,0.25);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        min-width: 180px;
+        transform-origin: top right;
+        transform: scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav-links.nav-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+      }
+
+      .nav-cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-wrapper {
+        padding-bottom: 40px;
+      }
+
+      header.page-hero {
+        padding-top: 24px;
+      }
+
+      .content-section {
+        padding: 20px 16px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">
+        <span></span> STORYCRAFT
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#process">My Process</a></li>
+        <li><a href="#journey">Writing Journey</a></li>
+        <li><a href="#storycraft">StoryCraft Method</a></li>
+        <li><button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Work With Me</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <!-- HERO HEADER -->
+    <header class="page-hero" id="hero">
+      <p class="tagline">Writing Journey </p>
+      <h1>From Simple Storyline to Powerful Masterpiece</h1>
+      <p>Hi, I'm Hinge Chanakya. I write and craft stories like mini films – shaping characters, emotions, and visuals so the audience doesn't just read the story, they feel it.</p>
+
+      <div class="hero-cta-group">
+        <button class="btn-primary" onclick="document.getElementById('process').scrollIntoView({behavior:'smooth'});">
+          View My Story Process
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+          Collaborate on a Script
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <h2>Storytelling is more than just writing words</h2>
+        <p>
+          For me, a story is not just ink on paper or text on a screen. It’s
+          another life being created. Every character, every scene, and every
+          emotion is carefully shaped so that the audience doesn’t just read the story –
+          they <strong>feel</strong> it.
+        </p>
+        <div class="hero-highlights">
+          <div class="pill">Idea to Impact</div>
+          <div class="pill">Character-Driven</div>
+          <div class="pill">Emotional Arcs</div>
+          <div class="pill">Visual Storytelling</div>
+        </div>
+      </div>
+
+      <div class="hero-image reveal">
+        <img src="https://i.ibb.co/Vcr42cYS/Whats-App-Image-2025-11-26-at-9-39-14-PM.jpg"
+             alt="How I Write a Powerful Story poster">
+        <p class="hero-caption">My visual guide to writing powerful stories – from idea to polished draft.</p>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="content-section reveal" id="process">
+      <h2>How I Write a Powerful Story – My Process</h2>
+      <p>
+        Before I start typing, I usually take a rough sheet of paper and sketch the entire flow of the story.
+        I map how it begins, how it grows, and how it ends. I look at the impact between character and character,
+        character and audience, and character and story.
+      </p>
+      <p>
+        Over time, this became my personal method. These are the core steps shown in my first poster:
+      </p>
+
+      <div class="two-column">
+        <div class="card">
+          <h3>Step-by-Step Flow</h3>
+          <ul class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <span class="step-title">Get an Idea</span>
+                <span class="step-desc">Everything begins with a spark – an interesting thought, situation, or “what if” moment.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <span class="step-title">Develop the Core Story</span>
+                <span class="step-desc">I refine the idea and shape it into a basic storyline with a clear direction.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <span class="step-title">Decide the Genre</span>
+                <span class="step-desc">Action, sci-fi, romance, drama, thriller – the genre sets tone and atmosphere.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <span class="step-title">Build the Emotional Arc</span>
+                <span class="step-desc">I plan what the audience should feel and where they should laugh, cry, or feel tense.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Deepening the Story</h3>
+          <ul class="steps">
+            <li>
+              <span class="step-num">5</span>
+              <div>
+                <span class="step-title">Develop the Characters</span>
+                <span class="step-desc">I create characters with real goals, flaws, strengths, and inner conflicts.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">6</span>
+              <div>
+                <span class="step-title">Shape the World &amp; Setting</span>
+                <span class="step-desc">I build the universe around them – especially important for sci-fi and action stories.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">7</span>
+              <div>
+                <span class="step-title">Prepare the Structure</span>
+                <span class="step-desc">I break the story into beginning, middle, and climax so it flows smoothly.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">8</span>
+              <div>
+                <span class="step-title">Finish &amp; Polish the Story</span>
+                <span class="step-desc">I rewrite, improve, and tighten everything to make the story clearer and more emotional.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITING JOURNEY SECTION -->
+    <section class="content-section reveal" id="journey">
+      <h2>From Rough Sketch to Living Story</h2>
+      <p>
+        Before I write anything seriously, I always begin with a rough page. On that page, I draw lines, arrows, and
+        small diagrams. I explain the story to myself first – how it starts, how it moves, and how it ends. I think about
+        how one character affects another, how the audience will feel in each scene, and how the story connects all of
+        them together.
+      </p>
+      <p>
+        Story writing is not just sitting down and randomly writing something. It is a process of giving another life
+        to the page. Every word is a step, every scene is a heartbeat, and every character carries part of the soul of
+        the story.
+      </p>
+      <p>
+        It’s not necessary for every writer to follow the exact same steps I use. Every storyteller has their own
+        technique and their own small touch of uniqueness in every line. But I wanted to share how <strong>I</strong> craft my
+        stories – how I turn simple ideas into complete narratives – in the hope that it might help or inspire someone
+        else on their writing journey.
+      </p>
+    </section>
+
+    <!-- STORYCRAFT METHOD SECTION -->
+    <section class="storycraft-section reveal" id="storycraft">
+      <div class="storycraft-inner">
+        <div class="storycraft-header">
+          <div>
+            <div class="storycraft-title">STORY CRAFT</div>
+            <div class="storycraft-sub">My personal method to turn a spark into a full, cinematic story – from that first “what if” thought to a complete script or short film.</div>
+          </div>
+          <div class="storycraft-poster">
+            <img src="https://i.ibb.co/R4hmMgTp/Whats-App-Image-2025-11-26-at-9-53-19-PM.jpg"
+                 alt="Storycraft Process poster">
+          </div>
+        </div>
+
+        <div class="grid-letters">
+          <div class="letter-card">
+            <div class="letter-symbol">S</div>
+            <div class="letter-heading">Spark the Idea</div>
+            <div class="letter-desc">
+              Every story begins with a small spark – a thought, a question, or a moment that refuses to leave your mind.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">T</div>
+            <div class="letter-heading">Tune the Core Story</div>
+            <div class="letter-desc">
+              I refine that spark into a clear core concept and decide what the story is truly about at its heart.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">O</div>
+            <div class="letter-heading">Outline the Genre</div>
+            <div class="letter-desc">
+              I choose the genre and overall tone – drama, thriller, sci-fi, romance – so the story has a clear direction.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">R</div>
+            <div class="letter-heading">Raise the Emotional Arc</div>
+            <div class="letter-desc">
+              I decide where the reader should feel tension, relief, joy, sadness, or hope, and build the emotional curve.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">Y</div>
+            <div class="letter-heading">Yield Strong Characters</div>
+            <div class="letter-desc">
+              I create characters with depth – their desires, fears, backgrounds, and conflicts make the story feel alive.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">C</div>
+            <div class="letter-heading">Create the World</div>
+            <div class="letter-desc">
+              I shape the setting and rules of the world, whether it’s a simple town or an entire universe.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">R</div>
+            <div class="letter-heading">Refine the Structure</div>
+            <div class="letter-desc">
+              I organize the plot into a strong structure – beginning, build-up, conflict, twist, and climax.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">A</div>
+            <div class="letter-heading">Adjust &amp; Polish</div>
+            <div class="letter-desc">
+              I rewrite, cut, and improve scenes so the story becomes tighter, clearer, and more powerful.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">F</div>
+            <div class="letter-heading">Frame the Visuals</div>
+            <div class="letter-desc">
+              I imagine each scene like a film shot – how it looks, feels, and moves inside the reader’s mind.
+            </div>
+          </div>
+
+          <div class="letter-card">
+            <div class="letter-symbol">T</div>
+            <div class="letter-heading">Tell the Story</div>
+            <div class="letter-desc">
+              Finally, I sit down and let the words flow, trusting the process and bringing the story fully to life.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / PORTFOLIO CTA -->
+    <section class="contact-section reveal" id="contact">
+      <div class="closing">
+        Create the story. Make it engaging. Make it yours.
+        <span>Every writer has a unique process — this is mine.</span>
+      </div>
+
+      <div class="contact-card" style="margin-top:18px;">
+        <strong>Let’s Build a Story Together</strong>
+        For collaborations, scriptwriting, or storytelling projects, or Filmprojects feel free to reach out:
+        <br>
+        Email: <a href="mailto:hingechanakya7@gmail.com">hingechanakya7@gmail.com</a>
+      </div>
+
+      <p class="contact-tagline">
+        Short films · Story concepts · Film-making · Emotional narratives
+      </p>
+    </section>
+
+    <p class="footer-meta">
+      All copyrights reserved to Hinge Chanakya Kumar
+    </p>
+  </div>
+
+  <!-- SIMPLE JS: NAV TOGGLE + SCROLL REVEAL -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+
+    // Close nav when clicking a link (on mobile)
+    navLinks.addEventListener("click", (e) => {
+      if (e.target.tagName.toLowerCase() === "a" || e.target.tagName.toLowerCase() === "button") {
+        navLinks.classList.remove("nav-open");
+      }
+    });
+
+    // Scroll reveal animation
+    const revealEls = document.querySelectorAll(".reveal");
+
+    function handleReveal() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      revealEls.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", handleReveal);
+    window.addEventListener("load", handleReveal);
+  </script>
+</body>
+</html>
